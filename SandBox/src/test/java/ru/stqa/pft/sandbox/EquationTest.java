@@ -9,17 +9,17 @@ import org.testng.annotations.Test;
 public class EquationTest {
 
     @Test
-    public  void testEquation() {
+    public  void test() {
         Equation c = new Equation(1, 1, 1);
         Assert.assertEquals(c.rootNumber(), 0);
     }
     @Test
-    public  void testEquation1() {
+    public  void test1() {
         Equation c = new Equation(1, 2, 1);
         Assert.assertEquals(c.rootNumber(), 1);
     }
     @Test
-    public  void testEquation2() {
+    public  void test2() {
         Equation c = new Equation(1, 5, 6);
         Assert.assertEquals(c.rootNumber(), 2);
     }
