@@ -14,7 +14,7 @@ public class NavigationHelper extends HeplerBase{
        super(wd);
     }
 
-    public void gotoGroupPage() {
+    public void GroupPage() {
        click(By.linkText("groups"));
     }
 }

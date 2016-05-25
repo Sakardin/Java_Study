@@ -58,7 +58,7 @@ public class GroupHelper  extends HeplerBase {
 
     }
 
-    public List<GroupData> getGroupList() {
+    public List<GroupData> list() {
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements){
@@ -70,4 +70,27 @@ public class GroupHelper  extends HeplerBase {
 
         return groups;
     }
+
+    public void modify(int index, GroupData group) {
+        selectGroup(index);
+        initGroupModification();
+
+        fillGroupForm(group);
+
+        submitGroupModification();
+        returnToGroupPage();
+    }
+    public void delete(int index) {
+        selectGroup(index);
+       deleteSelectedGroup();
+        returnToGroupPage();
+    }
+    public void create(GroupData group) {
+        initGroupCreation();
+
+        fillGroupForm(group);
+        submitGroupCreation();
+        returnToGroupPage();
+    }
+
 }
